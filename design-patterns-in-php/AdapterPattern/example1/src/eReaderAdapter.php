@@ -7,14 +7,14 @@ class eReaderAdapter implements BookInterface
     private $reader;
     public function __construct(eReaderInterface $reader)
     {
-        $this->kindle = $reader;
+        $this->reader = $reader;
     }
     public function open()
     {
-        $this->kindle->turnOn();
+        $this->reader->turnOn();
     }
     public function turnPage()
     {
-        $this->kindle->pressNextButton();
+        $this->reader->pressNextButton();
     }
 }
